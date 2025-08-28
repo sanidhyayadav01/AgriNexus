@@ -1,0 +1,229 @@
+import express from "express";
+import mongoose from "mongoose";
+import cors from "cors";
+import dotenv from "dotenv";
+import soilTestRoutes from "./soiltest.js";
+
+
+dotenv.config();
+
+const app = express();
+app.use(express.json());
+app.use(cors());
+
+// MongoDB connection
+mongoose.connect(process.env.MONGO_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+})
+.then(() => console.log("✅ MongoDB connected"))
+.catch(err => console.error("❌ MongoDB connection error:", err));
+
+// Routes
+app.get("/", (req, res) => {
+  res.send("Crop Recommendation API is running 🌱");
+});
+
+app.use("/soil-test", soilTestRoutes);
+
+
+// Define Crop Schema
+const cropSchema = new mongoose.Schema({
+  N: Number,
+  P: Number,
+  K: Number,
+  temperature: Number,
+  humidity: Number,
+  ph: Number,
+  rainfall: Number,
+  label: String
+});
+
+// Model
+const Crop = mongoose.models.Crop || mongoose.model("Crop", cropSchema);
+
+// --- Add this route below your other routes ---
+
+app.get("/seed-crops", async (req, res) => {
+  try {
+    const seedData = [
+      { N: 90, P: 42, K: 43, temperature: 20.8, humidity: 82, ph: 6.5, rainfall: 202, label: "rice" },
+      { N: 85, P: 58, K: 41, temperature: 23.1, humidity: 80, ph: 6.2, rainfall: 180, label: "wheat" },
+      { N: 100, P: 40, K: 40, temperature: 28, humidity: 75, ph: 6.8, rainfall: 220, label: "maize" },
+      { N: 50, P: 50, K: 40, temperature: 25, humidity: 70, ph: 6.3, rainfall: 200, label: "chickpea" },
+      { N: 60, P: 40, K: 50, temperature: 27, humidity: 68, ph: 6.7, rainfall: 190, label: "kidneybeans" },
+      { N: 55, P: 42, K: 48, temperature: 24, humidity: 71, ph: 6.4, rainfall: 210, label: "pigeonpeas" },
+      { N: 58, P: 46, K: 44, temperature: 26, humidity: 72, ph: 6.6, rainfall: 195, label: "mothbeans" },
+      { N: 65, P: 38, K: 45, temperature: 23, humidity: 74, ph: 6.2, rainfall: 205, label: "mungbean" },
+      { N: 72, P: 36, K: 47, temperature: 22, humidity: 77, ph: 6.5, rainfall: 198, label: "blackgram" },
+      { N: 68, P: 44, K: 49, temperature: 29, humidity: 73, ph: 6.8, rainfall: 215, label: "lentil" },
+      { N: 88, P: 35, K: 50, temperature: 24, humidity: 80, ph: 6.6, rainfall: 230, label: "pomegranate" },
+      { N: 92, P: 40, K: 55, temperature: 26, humidity: 79, ph: 6.7, rainfall: 240, label: "banana" },
+      { N: 95, P: 42, K: 52, temperature: 25, humidity: 81, ph: 6.4, rainfall: 225, label: "mango" },
+      { N: 97, P: 39, K: 54, temperature: 27, humidity: 78, ph: 6.5, rainfall: 210, label: "grapes" },
+      { N: 90, P: 41, K: 56, temperature: 28, humidity: 76, ph: 6.6, rainfall: 235, label: "watermelon" },
+      { N: 85, P: 45, K: 58, temperature: 29, humidity: 74, ph: 6.8, rainfall: 220, label: "muskmelon" },
+      { N: 82, P: 43, K: 57, temperature: 30, humidity: 72, ph: 6.7, rainfall: 200, label: "apple" },
+      { N: 80, P: 47, K: 53, temperature: 24, humidity: 79, ph: 6.5, rainfall: 245, label: "orange" },
+      { N: 78, P: 49, K: 55, temperature: 23, humidity: 81, ph: 6.3, rainfall: 250, label: "papaya" },
+      { N: 76, P: 51, K: 59, temperature: 26, humidity: 77, ph: 6.4, rainfall: 260, label: "coconut" },
+      { N: 74, P: 48, K: 60, temperature: 27, humidity: 75, ph: 6.6, rainfall: 270, label: "cotton" },
+      { N: 72, P: 46, K: 62, temperature: 28, humidity: 73, ph: 6.8, rainfall: 280, label: "jute" },
+      { N: 70, P: 44, K: 63, temperature: 29, humidity: 71, ph: 6.7, rainfall: 290, label: "coffee" },
+      { N: 68, P: 42, K: 65, temperature: 30, humidity: 70, ph: 6.5, rainfall: 300, label: "tea" },
+      { N: 66, P: 40, K: 66, temperature: 31, humidity: 69, ph: 6.4, rainfall: 310, label: "barley" },
+      { N: 64, P: 38, K: 67, temperature: 32, humidity: 68, ph: 6.3, rainfall: 320, label: "sugarcane" },
+      { N: 62, P: 36, K: 68, temperature: 33, humidity: 67, ph: 6.2, rainfall: 330, label: "pearlmillet" },
+      { N: 60, P: 34, K: 69, temperature: 34, humidity: 66, ph: 6.1, rainfall: 340, label: "sorghum" },
+      { N: 58, P: 32, K: 70, temperature: 35, humidity: 65, ph: 6.0, rainfall: 350, label: "groundnut" },
+      { N: 56, P: 30, K: 71, temperature: 36, humidity: 64, ph: 6.2, rainfall: 360, label: "soybean" },
+      { N: 54, P: 28, K: 72, temperature: 37, humidity: 63, ph: 6.3, rainfall: 370, label: "sunflower" },
+      { N: 52, P: 26, K: 73, temperature: 38, humidity: 62, ph: 6.4, rainfall: 380, label: "sesame" },
+      { N: 50, P: 24, K: 74, temperature: 39, humidity: 61, ph: 6.5, rainfall: 390, label: "mustard" },
+      { N: 48, P: 22, K: 75, temperature: 40, humidity: 60, ph: 6.6, rainfall: 400, label: "linseed" },
+      { N: 46, P: 20, K: 76, temperature: 41, humidity: 59, ph: 6.7, rainfall: 410, label: "safflower" },
+      { N: 44, P: 18, K: 77, temperature: 42, humidity: 58, ph: 6.8, rainfall: 420, label: "tobacco" },
+      { N: 42, P: 16, K: 78, temperature: 43, humidity: 57, ph: 6.9, rainfall: 430, label: "rubber" },
+      { N: 40, P: 14, K: 79, temperature: 44, humidity: 56, ph: 7.0, rainfall: 440, label: "oilpalm" },
+      { N: 38, P: 12, K: 80, temperature: 45, humidity: 55, ph: 7.1, rainfall: 450, label: "cashew" },
+      { N: 36, P: 10, K: 81, temperature: 46, humidity: 54, ph: 7.2, rainfall: 460, label: "turmeric" },
+      { N: 34, P: 8, K: 82, temperature: 47, humidity: 53, ph: 7.3, rainfall: 470, label: "ginger" },
+      { N: 32, P: 6, K: 83, temperature: 48, humidity: 52, ph: 7.4, rainfall: 480, label: "garlic" },
+      { N: 30, P: 4, K: 84, temperature: 49, humidity: 51, ph: 7.5, rainfall: 490, label: "onion" },
+      { N: 28, P: 2, K: 85, temperature: 50, humidity: 50, ph: 7.6, rainfall: 500, label: "potato" },
+      { N: 26, P: 5, K: 86, temperature: 22, humidity: 83, ph: 6.3, rainfall: 205, label: "tomato" },
+      { N: 24, P: 7, K: 87, temperature: 25, humidity: 79, ph: 6.5, rainfall: 215, label: "brinjal" },
+      { N: 22, P: 9, K: 88, temperature: 27, humidity: 76, ph: 6.6, rainfall: 225, label: "cabbage" },
+      { N: 20, P: 11, K: 89, temperature: 30, humidity: 74, ph: 6.8, rainfall: 235, label: "cauliflower" },
+      { N: 18, P: 13, K: 90, temperature: 32, humidity: 72, ph: 6.9, rainfall: 245, label: "spinach" },
+      { N: 16, P: 15, K: 91, temperature: 34, humidity: 70, ph: 7.0, rainfall: 255, label: "carrot" },
+      { N: 14, P: 17, K: 92, temperature: 36, humidity: 68, ph: 7.1, rainfall: 265, label: "beetroot" },
+      { N: 12, P: 19, K: 93, temperature: 28, humidity: 67, ph: 6.8, rainfall: 275, label: "radish" },
+      { N: 10, P: 21, K: 94, temperature: 26, humidity: 69, ph: 6.7, rainfall: 285, label: "turnip" },
+      { N: 15, P: 18, K: 95, temperature: 24, humidity: 71, ph: 6.6, rainfall: 290, label: "lettuce" },
+      { N: 17, P: 20, K: 96, temperature: 23, humidity: 70, ph: 6.5, rainfall: 300, label: "coriander" },
+      { N: 19, P: 22, K: 97, temperature: 25, humidity: 72, ph: 6.6, rainfall: 310, label: "mint" },
+      { N: 21, P: 24, K: 98, temperature: 27, humidity: 73, ph: 6.7, rainfall: 320, label: "basil" },
+      { N: 23, P: 26, K: 99, temperature: 28, humidity: 75, ph: 6.8, rainfall: 330, label: "oregano" },
+      { N: 22, P: 28, K: 100, temperature: 29, humidity: 76, ph: 6.9, rainfall: 340, label: "thyme" },
+      { N: 27, P: 30, K: 101, temperature: 30, humidity: 77, ph: 7.0, rainfall: 350, label: "chili" },
+      { N: 29, P: 32, K: 102, temperature: 31, humidity: 78, ph: 6.8, rainfall: 360, label: "bellpepper" },
+      { N: 31, P: 34, K: 103, temperature: 32, humidity: 79, ph: 6.7, rainfall: 370, label: "cucumber" },
+      { N: 33, P: 36, K: 104, temperature: 33, humidity: 80, ph: 6.6, rainfall: 380, label: "bittergourd" },
+      { N: 35, P: 38, K: 105, temperature: 34, humidity: 81, ph: 6.5, rainfall: 390, label: "pumpkin" },
+      { N: 37, P: 40, K: 106, temperature: 35, humidity: 82, ph: 6.4, rainfall: 400, label: "bottle gourd" },
+      { N: 39, P: 42, K: 107, temperature: 36, humidity: 83, ph: 6.3, rainfall: 410, label: "ridge gourd" },
+      { N: 41, P: 44, K: 108, temperature: 37, humidity: 84, ph: 6.2, rainfall: 420, label: "snake gourd" },
+      { N: 43, P: 46, K: 109, temperature: 38, humidity: 85, ph: 6.1, rainfall: 430, label: "ash gourd" },
+      { N: 45, P: 48, K: 110, temperature: 39, humidity: 86, ph: 6.0, rainfall: 440, label: "tinda" },
+      { N: 47, P: 50, K: 111, temperature: 40, humidity: 87, ph: 6.5, rainfall: 450, label: "kohlrabi" },
+      { N: 49, P: 52, K: 112, temperature: 25, humidity: 80, ph: 6.4, rainfall: 200, label: "okra" },
+      { N: 51, P: 54, K: 113, temperature: 26, humidity: 81, ph: 6.3, rainfall: 210, label: "fenugreek" },
+      { N: 53, P: 56, K: 114, temperature: 27, humidity: 82, ph: 6.2, rainfall: 220, label: "spinach" },
+      { N: 55, P: 58, K: 115, temperature: 28, humidity: 83, ph: 6.1, rainfall: 230, label: "amaranth" },
+      { N: 57, P: 60, K: 116, temperature: 29, humidity: 84, ph: 6.0, rainfall: 240, label: "chili pepper" },
+      { N: 59, P: 62, K: 117, temperature: 30, humidity: 85, ph: 6.5, rainfall: 250, label: "eggplant" },
+      { N: 61, P: 64, K: 118, temperature: 31, humidity: 86, ph: 6.4, rainfall: 260, label: "garlic chives" },
+      { N: 63, P: 66, K: 119, temperature: 32, humidity: 87, ph: 6.3, rainfall: 270, label: "spring onion" },
+      { N: 65, P: 68, K: 120, temperature: 33, humidity: 88, ph: 6.2, rainfall: 280, label: "leek" },
+      { N: 67, P: 70, K: 121, temperature: 34, humidity: 89, ph: 6.1, rainfall: 290, label: "celery" },
+      { N: 69, P: 72, K: 122, temperature: 35, humidity: 90, ph: 6.0, rainfall: 300, label: "asparagus" },
+      { N: 71, P: 74, K: 123, temperature: 36, humidity: 91, ph: 6.5, rainfall: 310, label: "artichoke" },
+      { N: 73, P: 76, K: 124, temperature: 37, humidity: 92, ph: 6.4, rainfall: 320, label: "broccoli" },
+      { N: 75, P: 78, K: 125, temperature: 38, humidity: 93, ph: 6.3, rainfall: 330, label: "cauliflower" },
+      { N: 77, P: 80, K: 126, temperature: 39, humidity: 94, ph: 6.2, rainfall: 340, label: "brussels sprouts" },
+      { N: 79, P: 82, K: 127, temperature: 40, humidity: 95, ph: 6.1, rainfall: 350, label: "kale" },
+      { N: 81, P: 84, K: 128, temperature: 25, humidity: 96, ph: 6.0, rainfall: 360, label: "collard greens" },
+      { N: 83, P: 86, K: 129, temperature: 26, humidity: 97, ph: 6.5, rainfall: 370, label: "pak choi" },
+      { N: 85, P: 88, K: 130, temperature: 27, humidity: 98, ph: 6.4, rainfall: 380, label: "bok choy" },
+      { N: 87, P: 90, K: 131, temperature: 28, humidity: 99, ph: 6.3, rainfall: 390, label: "swiss chard" },
+      { N: 89, P: 92, K: 132, temperature: 29, humidity: 100, ph: 6.2, rainfall: 400, label: "endive" },
+      { N: 91, P: 94, K: 133, temperature: 30, humidity: 81, ph: 6.5, rainfall: 410, label: "radicchio" },
+      { N: 93, P: 96, K: 134, temperature: 31, humidity: 82, ph: 6.4, rainfall: 420, label: "fennel" },
+      { N: 95, P: 98, K: 135, temperature: 32, humidity: 83, ph: 6.3, rainfall: 430, label: "dill" },
+      { N: 97, P: 100, K: 136, temperature: 33, humidity: 84, ph: 6.2, rainfall: 440, label: "parsley" },
+      { N: 99, P: 102, K: 137, temperature: 34, humidity: 85, ph: 6.1, rainfall: 450, label: "sage" },
+      { N: 101, P: 104, K: 138, temperature: 35, humidity: 86, ph: 6.0, rainfall: 460, label: "rosemary" },
+      { N: 105, P: 108, K: 140, temperature: 37, humidity: 88, ph: 6.4, rainfall: 480, label: "lavender" }
+    ];
+
+    // clear previous data to avoid duplicates
+    await Crop.deleteMany({});
+    const crops = await Crop.insertMany(seedData);
+
+    // return the actual crops
+    res.json(crops);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+
+// Test Route to fetch data
+app.get("/recommend-crop", async (req, res) => {
+  try {
+    const crops = await Crop.find().limit(10);
+    res.json(crops);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+
+
+// POST request for top 4 crop recommendations
+app.post("/recommend-crop", async (req, res) => {
+  try {
+    const { N, P, K, temperature, humidity, ph, rainfall } = req.body;
+
+    if (
+      N === undefined ||
+      P === undefined ||
+      K === undefined ||
+      temperature === undefined ||
+      humidity === undefined ||
+      ph === undefined ||
+      rainfall === undefined
+    ) {
+      return res.status(400).json({ error: "Please provide all input values" });
+    }
+
+    // Fetch all crops
+    const crops = await Crop.find();
+
+    // Calculate distance for each crop
+    const scoredCrops = crops.map(crop => {
+      const distance = Math.sqrt(
+        Math.pow(crop.N - N, 2) +
+        Math.pow(crop.P - P, 2) +
+        Math.pow(crop.K - K, 2) +
+        Math.pow(crop.temperature - temperature, 2) +
+        Math.pow(crop.humidity - humidity, 2) +
+        Math.pow(crop.ph - ph, 2) +
+        Math.pow(crop.rainfall - rainfall, 2)
+      );
+      return { crop, distance };
+    });
+
+    // Sort by distance (lower = better match)
+    const topCrops = scoredCrops.sort((a, b) => a.distance - b.distance).slice(0, 4);
+
+    res.json({
+      recommended_crops: topCrops.map(item => ({
+        crop: item.crop.label,
+        distance: item.distance.toFixed(2),
+        details: item.crop
+      }))
+    });
+
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+
+
+const PORT = 5000;
+app.listen(PORT, () => {
+  console.log(`🚀 Server running on http://localhost:${PORT}`);
+});

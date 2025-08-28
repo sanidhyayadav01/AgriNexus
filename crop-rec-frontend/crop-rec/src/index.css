@@ -1,0 +1,19 @@
+@import "tailwindcss";
+@keyframes borderGlow {
+  0% {
+    border-color: transparent;
+    box-shadow: 0 0 0px green;
+  }
+  50% {
+    border-color: #22c55e; /* Tailwind green-500 */
+    box-shadow: 0 0 10px #22c55e;
+  }
+  100% {
+    border-color: transparent;
+    box-shadow: 0 0 0px green;
+  }
+}
+
+.animate-borderGlow {
+  animation: borderGlow 1.5s infinite;
+}
