@@ -1,8 +1,6 @@
 const mongoose = require("mongoose");
 const fs = require("fs");
 
-const MONGO_URI = "mongodb+srv://dbuser:sanidhya462003@cluster0.weuslpr.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"; 
-
 // Schema
 const cropSchema = new mongoose.Schema({
   N: Number,
