@@ -1,6 +1,6 @@
 # 🌱 AgriNexus
 
-AgriNexus is a full-stack web application designed to empower farmers and agriculture enthusiasts with modern tools for sustainable farming. It provides personalized crop recommendations, soil testing utilities, and access to sustainable farming practices — all aimed at improving productivity while preserving the environment.
+AgriNexus is a web application designed to empower farmers and agriculture enthusiasts with modern tools for sustainable farming. It provides personalized crop recommendations, soil testing utilities, and access to sustainable farming practices — all aimed at improving productivity while preserving the environment.
 
 ---
 
