@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function Home() {
   const features = [
-    { title: "Wide Crop Database", desc: "Access data for over 50+ crops to optimize your yield." },
+    { title: "Wide Crop Database", desc: "Access data for over 90+ crops to optimize your yield." },
     { title: "Smart Recommendations", desc: "Get crop suggestions based on soil and weather conditions." },
     { title: "Sustainable Farming", desc: "Learn methods that save water, fertilizer, and resources." },
   ];

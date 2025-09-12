@@ -24,8 +24,8 @@ export default function SearchBar({ placeholder, onSearch }) {
         value={query}
         onChange={handleInputChange}
         onKeyDown={handleKeyDown}
-        placeholder={placeholder}
-        className="w-full max-w-lg px-4 py-2 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500"
+        placeholder={placeholder || "Search Crops..."}
+        className="w-1/2 px-4 py-2 rounded-2xl shadow-md border border-gray-300 focus:ring-2 focus:ring-green-500 transition"
       />
     </div>
   );

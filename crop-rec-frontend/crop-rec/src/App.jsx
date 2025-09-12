@@ -6,6 +6,7 @@ import Crops from "./pages/Crops";
 import Recommendation from "./pages/Recommendation";
 import SoilTest from "./pages/SoilTest";
 import SustainableFarming from "./pages/SustainableFarming";
+import CropDetail from "./components/CropDetail";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/crops" element={<Crops />} />
+          <Route path="/crops/:id" element={<CropDetail />} />
           <Route path="/recommendation" element={<Recommendation />} />
           <Route path="/soil-test" element={<SoilTest />} />
           <Route path="/sustainable-farming" element={<SustainableFarming />} />

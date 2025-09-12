@@ -10,7 +10,7 @@ export default function Navbar() {
         {/* Logo + Heading */}
         <Link to="/" className="flex items-center gap-2">
           <img
-            src="/AGRI.png"  
+            src="./images/AGRI.png"  
             alt="AgriMantra Logo"
             className="h-8 w-8 object-contain"
           />
