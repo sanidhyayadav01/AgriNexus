@@ -38,7 +38,7 @@ export default function Recommendation() {
         ph: Number(form.ph),
       };
 
-      const res = await axios.post("http://localhost:5000/recommend-crop", payload);
+      const res = await axios.post("https://agrinexus-xm5k.onrender.com/recommend-crop", payload);
       setResult(res.data.recommended_crops || []);
     } catch (err) {
       setError(err.response?.data?.message || "Something went wrong. Please try again.");

@@ -27,7 +27,7 @@ export default function SoilTest() {
     setSuccess(null);
 
     try {
-      await axios.post("http://localhost:5000/soil-test", form);
+      await axios.post("https://agrinexus-xm5k.onrender.com/soil-test", form);
       setSuccess("Your soil test request has been sent successfully!");
       setForm({
         name: "",
