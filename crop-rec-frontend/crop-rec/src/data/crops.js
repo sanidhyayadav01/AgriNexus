@@ -147,7 +147,7 @@ export const crops = [
   sustainable: ["Trellising for better yield", "Organic sprays", "Mulching"]
 },
 {
-    id: 6,
+    id: 8,
     name: "Banana",
     image: "/images/banana.jpg",
     npk: "200-250:60-80:200-300 kg/ha",
@@ -169,7 +169,7 @@ export const crops = [
 },
 
 {
-    id: 7,
+    id: 9,
     name: "Barley",
     image: "/images/barley.jpg",
     npk: "40-60:20-30:20-30 kg/ha",
@@ -191,7 +191,7 @@ export const crops = [
 },
 
 {
-    id: 8,
+    id: 10,
     name: "Basil",
     image: "/images/basil.jpg",
     npk: "50-70:30-40:40-60 kg/ha",
@@ -213,7 +213,7 @@ export const crops = [
 },
 
 {
-    id: 9,
+    id: 11,
     name: "Beetroot",
     image: "/images/beetroot.jpg",
     npk: "60-90:40-50:60-80 kg/ha",
@@ -235,7 +235,7 @@ export const crops = [
 },
 
 {
-    id: 10,
+    id: 12,
     name: "Bell Pepper",
     image: "/images/bellpepper.jpg",
     npk: "100-120:50-60:70-80 kg/ha",
@@ -256,7 +256,7 @@ export const crops = [
     sustainable: ["Greenhouse cultivation", "Integrated nutrient management", "Drip irrigation"]
 },
 {
-  id: 11,
+  id: 13,
   name: "Bitter Gourd",
   image: "/images/bittergourd.jpg",
   npk: "40-60:40-50:40-60 kg/ha",
@@ -277,7 +277,7 @@ export const crops = [
   sustainable: ["Use of resistant varieties", "Organic mulching", "Integrated pest management"]
 },
 {
-  id: 12,
+  id: 14,
   name: "Black Gram",
   image: "/images/blackgram.jpg",
   npk: "20-40:40-60:30-40 kg/ha",
@@ -298,7 +298,7 @@ export const crops = [
   sustainable: ["Biological nitrogen fixation", "Crop rotation", "Minimal tillage"]
 },
 {
-  id: 13,
+  id: 15,
   name: "Blueberries",
   image: "/images/blue berries.jpg",
   npk: "60-80:40-60:40-50 kg/ha",
@@ -319,7 +319,7 @@ export const crops = [
   sustainable: ["Mulching with pine needles", "Rainwater harvesting", "Organic pest control"]
 },
 {
-  id: 14,
+  id: 16,
   name: "Bok Choy",
   image: "/images/bok choy.jpg",
   npk: "50-70:40-60:40-50 kg/ha",
@@ -340,7 +340,7 @@ export const crops = [
   sustainable: ["Drip irrigation", "Companion planting", "Organic manure usage"]
 },
 {
-  id: 15,
+  id: 17,
   name: "Bottle Gourd",
   image: "/images/bottle gourd.jpg",
   npk: "60-80:40-60:40-60 kg/ha",
@@ -361,7 +361,7 @@ export const crops = [
   sustainable: ["Trellis cultivation", "Organic mulching", "Integrated nutrient management"]
 },
 {
-  id: 16,
+  id: 18,
   name: "Brinjal",
   image: "/images/brinjal.jpg",
   npk: "100-120:50-60:60-70 kg/ha",
@@ -382,7 +382,7 @@ export const crops = [
   sustainable: ["Use resistant varieties", "Mulching", "Organic manure use"]
 },
 {
-  id: 17,
+  id: 19,
   name: "Broccoli",
   image: "/images/broccoli.jpg",
   npk: "120-150:60-80:40-60 kg/ha",
@@ -403,7 +403,7 @@ export const crops = [
   sustainable: ["Organic mulching", "Crop diversification", "IPM practices"]
 },
 {
-  id: 18,
+  id: 20,
   name: "Brussels Sprouts",
   image: "/images/brussels sprouts.jpg",
   npk: "100-120:80-100:60-80 kg/ha",
@@ -424,7 +424,7 @@ export const crops = [
   sustainable: ["Organic fertilizers", "Resistant varieties", "Intercropping"]
 },
 {
-  id: 19,
+  id: 21,
   name: "Cabbage",
   image: "/images/cabbage.jpg",
   npk: "120-150:60-80:40-60 kg/ha",
@@ -445,7 +445,7 @@ export const crops = [
   sustainable: ["Mulching", "Crop rotation", "Organic manures"]
 },
 {
-  id: 20,
+  id: 22,
   name: "Carrot",
   image: "/images/carrot.jpg",
   npk: "60-80:40-60:40-50 kg/ha",
@@ -466,7 +466,7 @@ export const crops = [
   sustainable: ["Drip irrigation", "Organic mulch", "Crop rotation"]
 },
 {
-    id: 21,
+    id: 23,
     name: "Cashew",
     image: "/images/cashew.jpg",
     npk: "100-150:40-60:100-120 kg/ha",
@@ -488,7 +488,7 @@ export const crops = [
 },
 
 {
-    id: 22,
+    id: 24,
     name: "Cauliflower",
     image: "/images/cauliflower.jpg",
     npk: "150-180:60-80:60-80 kg/ha",
@@ -510,7 +510,7 @@ export const crops = [
 },
 
 {
-    id: 23,
+    id: 25,
     name: "Celery",
     image: "/images/celery.jpg",
     npk: "120-150:50-70:100-120 kg/ha",
@@ -532,7 +532,7 @@ export const crops = [
 },
 
 {
-    id: 24,
+    id: 26,
     name: "Chickpeas",
     image: "/images/chickpea.jpg",
     npk: "20-30:40-50:20-30 kg/ha",
@@ -554,7 +554,7 @@ export const crops = [
 },
 
 {
-    id: 25,
+    id: 27,
     name: "Chili Pepper",
     image: "/images/chili pepper.jpg",
     npk: "120-150:60-80:60-80 kg/ha",
@@ -575,7 +575,7 @@ export const crops = [
     sustainable: ["Intercropping with onion/garlic", "Use of bio-pesticides", "Organic mulching"]
 },
 {
-  id: 31,
+  id: 28,
   name: "Chili",
   image: "/images/chili.jpg",
   npk: "120-150:50-60:50-60 kg/ha",
@@ -596,7 +596,7 @@ export const crops = [
   sustainable: ["Drip irrigation", "Mulching", "Use of bio-pesticides"]
 },
 {
-  id: 32,
+  id: 29,
   name: "Coriander",
   image: "/images/coriander.jpg",
   npk: "20-30:40-50:20-30 kg/ha",
@@ -617,7 +617,7 @@ export const crops = [
   sustainable: ["Organic farming", "Intercropping", "Reduced tillage"]
 },
 {
-  id: 33,
+  id: 30,
   name: "Collard Greens",
   image: "/images/collard greens.jpg",
   npk: "80-100:40-60:60-80 kg/ha",
@@ -638,7 +638,7 @@ export const crops = [
   sustainable: ["Crop rotation", "Mulching", "Organic manure use"]
 },
 {
-  id: 34,
+  id: 31,
   name: "Coffee",
   image: "/images/coffee.jpg",
   npk: "100-150:40-60:100-120 kg/ha",
@@ -659,7 +659,7 @@ export const crops = [
   sustainable: ["Shade-grown coffee", "Agroforestry", "Organic manures"]
 },
 {
-  id: 35,
+  id: 32,
   name: "Coconut",
   image: "/images/coconut.jpg",
   npk: "500-1200:320-500:1000-1500 g per palm/year",
@@ -680,7 +680,7 @@ export const crops = [
   sustainable: ["Organic mulching", "Mixed cropping", "Rainwater harvesting"]
 },
 {
-  id: 26,
+  id: 33,
   name: "Corn",
   image: "/images/corn.jpg",
   npk: "90-150:30-70:0-40 kg/ha",
@@ -702,7 +702,7 @@ export const crops = [
 },
 
 {
-  id: 27,
+  id: 34,
   name: "Cotton",
   image: "/images/cotton.jpg",
   npk: "80-100:30-50:30-50 kg/ha",
@@ -724,7 +724,7 @@ export const crops = [
 },
 
 {
-  id: 28,
+  id: 35,
   name: "Cucumber",
   image: "/images/cucumber.jpg",
   npk: "100-150:60-80:60-80 kg/ha",
@@ -746,7 +746,7 @@ export const crops = [
 },
 
 {
-  id: 29,
+  id: 36,
   name: "Dill",
   image: "/images/dill.jpg",
   npk: "50-75:50-80:50-80 kg/ha",
@@ -768,7 +768,7 @@ export const crops = [
 },
 
 {
-  id: 30,
+  id: 37,
   name: "Eggplant",
   image: "/images/eggplant.jpg",
   npk: "100-200:50-75:50-75 kg/ha",
@@ -789,7 +789,7 @@ export const crops = [
   sustainable: ["Organic mulching", "Integrated pest management", "Crop diversification"]
 },
 {
-  id: 36,
+  id: 38,
   name: "Endive",
   image: "/images/endive.jpg",
   npk: "60-80:40-60:40-60 kg/ha",
@@ -810,7 +810,7 @@ export const crops = [
   sustainable: ["Organic composting", "Mulching", "Efficient irrigation"]
 },
 {
-  id: 37,
+  id: 39,
   name: "Fennel",
   image: "/images/fennel.jpg",
   npk: "50-75:20-40:20-40 kg/ha",
@@ -831,7 +831,7 @@ export const crops = [
   sustainable: ["Organic mulching", "Crop diversification", "Biological pest control"]
 },
 {
-  id: 38,
+  id: 40,
   name: "Fenugreek",
   image: "/images/fenugreek.jpg",
   npk: "20-40:30-50:20-40 kg/ha",
@@ -852,7 +852,7 @@ export const crops = [
   sustainable: ["Nitrogen fixation", "Crop rotation", "Low water requirement"]
 },
 {
-  id: 39,
+  id: 41,
   name: "Garlic Chives",
   image: "/images/garlic chives.jpg",
   npk: "30-50:20-40:20-40 kg/ha",
@@ -873,7 +873,7 @@ export const crops = [
   sustainable: ["Organic fertilizers", "Efficient irrigation", "Integrated pest management"]
 },
 {
-  id: 40,
+  id: 42,
   name: "Garlic",
   image: "/images/garlic.jpg",
   npk: "60-100:75-100:75-100 kg/ha",
@@ -894,7 +894,7 @@ export const crops = [
   sustainable: ["Organic manuring", "Crop rotation", "Biological control of pests"]
 },
 {
-  id: 41,
+  id: 43,
   name: "Ginger",
   image: "/images/ginger.jpg",
   npk: "60-80:40-60:40-60 kg/ha",
@@ -915,7 +915,7 @@ export const crops = [
   sustainable: ["Organic mulching", "Intercropping", "Drip irrigation"]
 },
 {
-  id: 42,
+  id: 44,
   name: "Grapes",
   image: "/images/grapes.jpg",
   npk: "100-200:150-160:150-600 g/vine",
@@ -936,7 +936,7 @@ export const crops = [
   sustainable: ["Trellising system", "Drip irrigation", "Biological pest control"]
 },
 {
-  id: 43,
+  id: 45,
   name: "Jute",
   image: "/images/jute.jpg",
   npk: "40-60:20-30:20-40 kg/ha",
@@ -957,7 +957,7 @@ export const crops = [
   sustainable: ["Organic manure application", "Crop rotation", "Rainfed cultivation"]
 },
 {
-  id: 44,
+  id: 46,
   name: "Kale",
   image: "/images/kale.jpg",
   npk: "100:80:60 kg/ha",
@@ -978,7 +978,7 @@ export const crops = [
   sustainable: ["Crop diversification", "Organic mulching", "Pest-resistant varieties"]
 },
 {
-  id: 45,
+  id: 47,
   name: "Kidney Beans",
   image: "/images/kidneybeans.jpg",
   npk: "20:60:40 kg/ha",
@@ -999,7 +999,7 @@ export const crops = [
   sustainable: ["Intercropping", "Nitrogen fixation", "Minimum tillage"]
 },
 {
-  id: 46,
+  id: 48,
   name: "Kohlrabi",
   image: "/images/kohlrabi.jpg",
   npk: "100:80:80 kg/ha",
@@ -1020,7 +1020,7 @@ export const crops = [
   sustainable: ["Crop rotation", "Mulching", "Organic amendments"]
 },
 {
-  id: 47,
+  id: 49,
   name: "Lavender",
   image: "/images/lavender.jpg",
   npk: "40:40:40 kg/ha",
@@ -1041,7 +1041,7 @@ export const crops = [
   sustainable: ["Drip irrigation", "Organic manure use", "Bee-friendly farming"]
 },
 {
-  id: 48,
+  id: 50,
   name: "Leek",
   image: "/images/leek.jpg",
   npk: "80:60:60 kg/ha",
@@ -1062,7 +1062,7 @@ export const crops = [
   sustainable: ["Intercropping", "Mulching", "Organic compost"]
 },
 {
-  id: 49,
+  id: 51,
   name: "Lentils",
   image: "/images/lentil.jpg",
   npk: "20:40:20 kg/ha",
@@ -1083,7 +1083,7 @@ export const crops = [
   sustainable: ["Nitrogen fixation", "Intercropping", "Minimum tillage"]
 },
 {
-  id: 50,
+  id: 52,
   name: "Lettuce",
   image: "/images/lettuce.jpg",
   npk: "80:60:60 kg/ha",
@@ -1104,7 +1104,7 @@ export const crops = [
   sustainable: ["Mulching", "Organic farming", "Efficient irrigation"]
 },
 {
-  id: 51,
+  id: 53,
   name: "Linseed",
   image: "/images/linseed.jpg",
   npk: "40:20:40 kg/ha",
@@ -1125,7 +1125,7 @@ export const crops = [
   sustainable: ["Crop rotation", "Organic manures", "Low water requirement"]
 },
 {
-  id: 52,
+  id: 54,
   name: "Mango",
   image: "/images/mango.jpg",
   npk: "500:250:500 g/tree annually",
@@ -1146,7 +1146,7 @@ export const crops = [
   sustainable: ["Drip irrigation", "Organic mulching", "Agroforestry integration"]
 },
 {
-  id: 53,
+  id: 55,
   name: "Mint",
   image: "/images/mint.jpg",
   npk: "100:50:50 kg/ha",
@@ -1167,7 +1167,7 @@ export const crops = [
   sustainable: ["Organic manures", "Crop rotation", "Irrigation scheduling"]
 },
 {
-  id: 54,
+  id: 56,
   name: "Maize",
   image: "/images/maize.jpg",
   npk: "120:60:40 kg/ha",
@@ -1188,7 +1188,7 @@ export const crops = [
   sustainable: ["Zero tillage", "Intercropping with legumes", "Organic residue recycling"]
 },
 {
-  id: 55,
+  id: 57,
   name: "Moth Beans",
   image: "/images/mothbeans.jpg",
   npk: "20:40:20 kg/ha",
@@ -1209,7 +1209,7 @@ export const crops = [
   sustainable: ["Drought resistance", "Nitrogen fixation", "Low irrigation needs"]
 },
 {
-  id: 56,
+  id: 58,
   name: "Mungbean",
   image: "/images/mungbean.jpg",
   npk: "20:40:20 kg/ha",
@@ -1230,7 +1230,7 @@ export const crops = [
   sustainable: ["Nitrogen fixation", "Intercropping", "Reduced fertilizer demand"]
 },
 {
-  id: 57,
+  id: 59,
   name: "Muskmelon",
   image: "/images/muskmelon.jpg",
   npk: "40:60:40 kg/ha",
@@ -1251,7 +1251,7 @@ export const crops = [
   sustainable: ["Mulching", "Drip irrigation", "Crop rotation"]
 },
 {
-  id: 58,
+  id: 60,
   name: "Mustard",
   image: "/images/mustard.jpg",
   npk: "80:40:40 kg/ha",
@@ -1272,7 +1272,7 @@ export const crops = [
   sustainable: ["Integrated pest management", "Water-efficient irrigation", "Green manuring"]
 },
 {
-  id: 59,
+  id: 61,
   name: "Oil Palm",
   image: "/images/oilpalm.jpg",
   npk: "600:400:800 g/plant/year",
@@ -1293,7 +1293,7 @@ export const crops = [
   sustainable: ["Agroforestry", "Organic mulching", "Efficient irrigation"]
 },
 {
-  id: 60,
+  id: 62,
   name: "Okra",
   image: "/images/okra.jpg",
   npk: "100:60:50 kg/ha",
@@ -1314,7 +1314,7 @@ export const crops = [
   sustainable: ["Drip irrigation", "Mulching", "Integrated pest management"]
 },
 {
-  id: 61,
+  id: 63,
   name: "Onion",
   image: "/images/onion.jpg",
   npk: "100:50:50 kg/ha",
@@ -1335,7 +1335,7 @@ export const crops = [
   sustainable: ["Mulching", "Integrated pest management", "Crop rotation"]
 },
 {
-  id: 62,
+  id: 64,
   name: "Oregano",
   image: "/images/oregano.jpg",
   npk: "40:20:20 kg/ha",
@@ -1356,7 +1356,7 @@ export const crops = [
   sustainable: ["Organic mulching", "Minimal irrigation", "Intercropping"]
 },
 {
-  id: 63,
+  id: 65,
   name: "Orange",
   image: "/images/orange.jpg",
   npk: "500:250:300 g/tree/year",
@@ -1377,7 +1377,7 @@ export const crops = [
   sustainable: ["Drip irrigation", "Organic mulching", "Integrated nutrient management"]
 },
 {
-  id: 64,
+  id: 66,
   name: "Pak Choi",
   image: "/images/pak choi.jpg",
   npk: "80:40:40 kg/ha",
@@ -1398,7 +1398,7 @@ export const crops = [
   sustainable: ["Drip irrigation", "Mulching", "Organic fertilizers"]
 },
 {
-  id: 65,
+  id: 67,
   name: "Papaya",
   image: "/images/papaya.jpg",
   npk: "200:200:400 g/plant/year",
@@ -1419,7 +1419,7 @@ export const crops = [
   sustainable: ["Intercropping", "Organic mulching", "Drip irrigation"]
 },
 {
-  id: 66,
+  id: 68,
   name: "Parsley",
   image: "/images/parsley.jpg",
   npk: "40:60:40 kg/ha",
@@ -1440,7 +1440,7 @@ export const crops = [
   sustainable: ["Organic manure", "Crop rotation", "Drip irrigation"]
 },
 {
-  id: 67,
+  id: 69,
   name: "Peanut",
   image: "/images/peanut.jpg",
   npk: "20:40:40 kg/ha",
@@ -1461,7 +1461,7 @@ export const crops = [
   sustainable: ["Crop rotation", "Nitrogen fixation", "Minimum tillage"]
 },
 {
-  id: 68,
+  id: 70,
   name: "Pearl Millet",
   image: "/images/pearlmillet.jpg",
   npk: "60:40:30 kg/ha",
@@ -1482,7 +1482,7 @@ export const crops = [
   sustainable: ["Drought tolerance", "Intercropping", "Organic practices"]
 },
 {
-  id: 69,
+  id: 71,
   name: "Peas",
   image: "/images/peas.jpg",
   npk: "20:60:40 kg/ha",
@@ -1503,7 +1503,7 @@ export const crops = [
   sustainable: ["Nitrogen fixation", "Crop diversification", "Organic manure"]
 },
 {
-  id: 70,
+  id: 72,
   name: "Pigeon Peas",
   image: "/images/pigeonpeas.jpg",
   npk: "20:60:20 kg/ha",
@@ -1524,7 +1524,7 @@ export const crops = [
   sustainable: ["Agroforestry", "Nitrogen fixation", "Minimal irrigation"]
 },
 {
-  id: 71,
+  id: 73,
   name: "Pineapple",
   image: "/images/pineapple.jpg",
   npk: "12:8:12 g/plant/year",
@@ -1545,7 +1545,7 @@ export const crops = [
   sustainable: ["Mulching", "Organic manures", "Integrated pest management"]
 },
 {
-  id: 72,
+  id: 74,
   name: "Pomegranate",
   image: "/images/pomegranate.jpg",
   npk: "600:200:200 g/plant/year",
@@ -1566,7 +1566,7 @@ export const crops = [
   sustainable: ["Drip irrigation", "Pruning", "Organic farming"]
 },
 {
-  id: 73,
+  id: 75,
   name: "Potato",
   image: "/images/potato.jpg",
   npk: "120:80:100 kg/ha",
@@ -1587,7 +1587,7 @@ export const crops = [
   sustainable: ["Crop rotation", "Organic mulching", "IPM practices"]
 },
 {
-  id: 74,
+  id: 76,
   name: "Pumpkin",
   image: "/images/pumpkin.jpg",
   npk: "60:40:40 kg/ha",
@@ -1608,7 +1608,7 @@ export const crops = [
   sustainable: ["Mulching", "Organic manures", "Bee pollination support"]
 },
 {
-  id: 75,
+  id: 77,
   name: "Radicchio",
   image: "/images/radicchio.jpg",
   npk: "80:60:60 kg/ha",
@@ -1629,7 +1629,7 @@ export const crops = [
   sustainable: ["Crop rotation", "Organic manures", "Mulching"]
 },
 {
-  id: 76,
+  id: 78,
   name: "Ridge Gourd",
   image: "/images/ridge gourd.jpg",
   npk: "60:40:40 kg/ha",
@@ -1650,7 +1650,7 @@ export const crops = [
   sustainable: ["Crop rotation", "Drip irrigation", "Organic manures"]
 },
 {
-  id: 77,
+  id: 79,
   name: "Rosemary",
   image: "/images/rosemary.jpg",
   npk: "40:30:20 kg/ha",
@@ -1671,7 +1671,7 @@ export const crops = [
   sustainable: ["Organic farming", "Mulching", "Intercropping"]
 },
 {
-  id: 78,
+  id: 80,
   name: "Rubber",
   image: "/images/rubber.jpg",
   npk: "120:60:120 kg/ha",
@@ -1692,7 +1692,7 @@ export const crops = [
   sustainable: ["Cover cropping", "Organic mulching", "Agroforestry"]
 },
 {
-  id: 79,
+  id: 81,
   name: "Safflower",
   image: "/images/safflower.jpg",
   npk: "60:40:20 kg/ha",
@@ -1713,7 +1713,7 @@ export const crops = [
   sustainable: ["Crop rotation", "Rainfed farming", "Minimal tillage"]
 },
 {
-  id: 80,
+  id: 82,
   name: "Sage",
   image: "/images/sage.jpg",
   npk: "50:30:30 kg/ha",
@@ -1734,7 +1734,7 @@ export const crops = [
   sustainable: ["Organic farming", "Intercropping", "Mulching"]
 },
 {
-  id: 81,
+  id: 83,
   name: "Sesame",
   image: "/images/sesame.jpg",
   npk: "40:20:20 kg/ha",
@@ -1755,7 +1755,7 @@ export const crops = [
   sustainable: ["Crop rotation", "Organic manures", "Minimal irrigation"]
 },
 {
-  id: 82,
+  id: 84,
   name: "Snake Gourd",
   image: "/images/snake gourd.jpg",
   npk: "60:40:40 kg/ha",
@@ -1776,7 +1776,7 @@ export const crops = [
   sustainable: ["Organic manures", "Crop rotation", "Drip irrigation"]
 },
 {
-  id: 83,
+  id: 85,
   name: "Sorghum",
   image: "/images/sorghum.jpg",
   npk: "80:40:40 kg/ha",
@@ -1797,7 +1797,7 @@ export const crops = [
   sustainable: ["Drought resistance", "Minimal irrigation", "Crop rotation"]
 },
 {
-  id: 84,
+  id: 86,
   name: "Soybean",
   image: "/images/soybean.jpg",
   npk: "20:60:40 kg/ha",
@@ -1818,7 +1818,7 @@ export const crops = [
   sustainable: ["Crop rotation", "Biological nitrogen fixation", "Organic manures"]
 },
 {
-  id: 85,
+  id: 87,
   name: "Spinach",
   image: "/images/spinach.jpg",
   npk: "60:40:40 kg/ha",
@@ -1839,7 +1839,7 @@ export const crops = [
   sustainable: ["Organic manures", "Crop rotation", "Mulching"]
 },
 {
-  id: 86,
+  id: 88,
   name: "Spring Onion",
   image: "/images/spring onion.jpg",
   npk: "80:50:50 kg/ha",
@@ -1860,7 +1860,7 @@ export const crops = [
   sustainable: ["Organic manures", "Intercropping", "Mulching"]
 },
 {
-  id: 87,
+  id: 89,
   name: "Strawberry",
   image: "/images/strawberry.jpg",
   npk: "100:50:100 kg/ha",
@@ -1881,7 +1881,7 @@ export const crops = [
   sustainable: ["Drip irrigation", "Organic mulching", "Integrated pest management"]
 },
 {
-  id: 88,
+  id: 90,
   name: "Sugarcane",
   image: "/images/sugarcane.jpg",
   npk: "150:60:60 kg/ha",
@@ -1902,7 +1902,7 @@ export const crops = [
   sustainable: ["Trash mulching", "Drip irrigation", "Green manuring"]
 },
 {
-  id: 89,
+  id: 91,
   name: "Sunflower",
   image: "/images/sunflower.jpg",
   npk: "60:60:40 kg/ha",
@@ -1923,7 +1923,7 @@ export const crops = [
   sustainable: ["Crop rotation", "Organic fertilizers", "Water conservation"]
 },
 {
-  id: 90,
+  id: 92,
   name: "Sweet Potato",
   image: "/images/sweet potato.jpg",
   npk: "50:50:75 kg/ha",
@@ -1944,7 +1944,7 @@ export const crops = [
   sustainable: ["Organic mulching", "Crop rotation", "Integrated pest management"]
 },
 {
-  id: 91,
+  id: 93,
   name: "Swiss Chard",
   image: "/images/swiss chard.jpg",
   npk: "60:40:40 kg/ha",
@@ -1965,7 +1965,7 @@ export const crops = [
   sustainable: ["Organic fertilizers", "Crop rotation", "Mulching"]
 },
 {
-  id: 92,
+  id: 94,
   name: "Tea",
   image: "/images/tea.jpg",
   npk: "120:60:60 kg/ha",
@@ -1986,7 +1986,7 @@ export const crops = [
   sustainable: ["Organic farming", "Mulching", "Agroforestry"]
 },
 {
-  id: 93,
+  id: 95,
   name: "Thyme",
   image: "/images/thyme.jpg",
   npk: "40:30:20 kg/ha",
@@ -2007,7 +2007,7 @@ export const crops = [
   sustainable: ["Organic manures", "Drip irrigation", "Intercropping"]
 },
 {
-  id: 94,
+  id: 96,
   name: "Tinda",
   image: "/images/tinda.jpg",
   npk: "60:40:40 kg/ha",
@@ -2028,7 +2028,7 @@ export const crops = [
   sustainable: ["Crop rotation", "Mulching", "Integrated pest management"]
 },
 {
-  id: 95,
+  id: 97,
   name: "Tobacco",
   image: "/images/tobacco.jpg",
   npk: "80:40:40 kg/ha",
@@ -2049,7 +2049,7 @@ export const crops = [
   sustainable: ["Soil conservation", "Balanced fertilization", "IPM"]
 },
 {
-  id: 96,
+  id: 98,
   name: "Tomato",
   image: "/images/tomato.jpg",
   npk: "100:50:50 kg/ha",
@@ -2070,7 +2070,7 @@ export const crops = [
   sustainable: ["Mulching", "Drip irrigation", "Organic farming"]
 },
 {
-  id: 97,
+  id: 99,
   name: "Turmeric",
   image: "/images/turmeric.jpg",
   npk: "120:60:60 kg/ha",
@@ -2091,7 +2091,7 @@ export const crops = [
   sustainable: ["Organic manures", "Crop rotation", "Mulching"]
 },
 {
-  id: 98,
+  id: 100,
   name: "Turnip",
   image: "/images/turnip.jpg",
   npk: "60:40:40 kg/ha",
@@ -2112,7 +2112,7 @@ export const crops = [
   sustainable: ["Mulching", "Organic fertilizers", "Crop rotation"]
 },
 {
-  id: 99,
+  id: 101,
   name: "Walnut",
   image: "/images/walnut.jpg",
   npk: "700:250:700 g/tree/year",
@@ -2133,7 +2133,7 @@ export const crops = [
   sustainable: ["Organic mulching", "Agroforestry", "Water harvesting"]
 },
 {
-  id: 100,
+  id: 102,
   name: "Watermelon",
   image: "/images/watermelon.jpg",
   npk: "100:50:50 kg/ha",
