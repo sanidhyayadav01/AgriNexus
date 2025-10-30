@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useState, Suspense, lazy } from "react";
 import { crops } from "../data/crops";
 import SearchBar from "../components/SearchBar";
 import CropCard from "../components/CropCard";
-import CropDetail from "../components/CropDetail";
+
+const CropDetail = lazy(() => import("../components/CropDetail"));
 
 const CropPage = () => {
   const [selectedCrop, setSelectedCrop] = useState(null);
@@ -20,16 +21,29 @@ const CropPage = () => {
       <h1 className="text-3xl font-bold text-center mb-6 text-green-600">
         Crop Knowledge Center
       </h1>
+
       <SearchBar onSearch={handleSearch} />
+
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {filteredCrops.map((crop) => (
-          <CropCard key={crop.id} crop={crop} onSelect={setSelectedCrop} />
+          <CropCard
+            key={crop.id}
+            crop={crop}
+            onSelect={setSelectedCrop}
+            // Ensuring image lazy loading support inside CropCard
+          />
         ))}
       </div>
+
       {selectedCrop && (
-        <CropDetail crop={selectedCrop} onClose={() => setSelectedCrop(null)} />
+        <Suspense fallback={<p className="text-center mt-4">Loading details...</p>}>
+          <CropDetail crop={selectedCrop} onClose={() => setSelectedCrop(null)} />
+        </Suspense>
       )}
-      <h1>Image source : https://www.vecteezy.com</h1>
+
+      <h1 className="mt-6 text-sm text-center opacity-60">
+        Image source : https://www.vecteezy.com
+      </h1>
     </div>
   );
 };
